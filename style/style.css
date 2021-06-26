@@ -1,0 +1,1333 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+#headleft{
+    display: flex;
+}
+#headleft img{
+    width: 150px;
+    height: 70px;
+}
+#headleft ul{
+    padding-left: 25px;
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding-top: 28px;
+}
+header li{
+    display: inline;
+    padding-right: 20px;
+}
+#langue{
+    width: 30px;
+    height: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+h1, h2, h3, p{
+    text-align: center;
+}
+#headright ul{
+    padding-top: 25px;
+}
+#headright li{
+    padding-right: 31px;
+    font-size: 20px;
+}
+#headright li:last-child{
+    padding-right: 0;
+}
+.search{
+    align-self: center;
+    width: 38%;
+    background-color: #f4f4f6;
+    padding-left: 15px;
+}
+.search input:focus{
+    outline: none;
+}
+.search input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus{
+    background-color: #f4f4f6 !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px #f4f4f4f6 inset !important;
+    -webkit-text-fill-color: #555555 !important;
+    }
+#search2{
+    display: none;
+}       
+.search input{
+    border: none;
+    width: 90%;
+    font-size: 16px;
+    background-color: #f4f4f6;
+    padding: 10px;
+    border-radius: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+#search1 i{
+    position: relative;
+    top: 3px;
+}
+#toggle{
+	display: none;
+}
+label{
+	display: none;
+	margin: 18px 40px 0 0;
+	font-size: 26px;
+	color: silver;
+}
+@media screen and (max-width: 1024px){
+    header{
+        display: block;
+    }
+    #headleft {
+        float: left;
+    }
+    #search1 {
+        float: left;
+        margin-top: 15px;
+        padding-left: 30px;
+    }
+    .clear {
+        clear: both;
+    }
+    /* On fait d'abord disparaitre l'ancien menu */
+	.menu {
+		display: none;   
+	}	
+    /* On fait apparaitre le menu mobile	 */
+	#headright label {
+		display: block;
+		/* Pour supprimer le décalage du 1er lien */
+		position:absolute;
+		right:0;
+	}
+	.menu li {
+		display: block;
+		margin: 0;
+        float: left;
+	}
+	#toggle:checked + .menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        float: left;
+        padding: 10px 0 0;
+		/* Ajout d'une animation */
+		animation: slide-left 1s ease-out;
+	}
+}
+/* Ajout d'animations  */
+@keyframes slide-left {
+    0% { opacity: 0; -webkit-transform: translateX(-100%); }   
+  100% { opacity: 1; -webkit-transform: translateX(0); }
+}
+@media screen and (max-width: 768px) {
+    #headleft li{
+        display: none;
+    }
+    .search {
+        width: 50%;
+    }
+    .search input{
+        width: 90%;
+    }   
+}
+@media screen and (max-width: 600px){
+    #headleft li{
+        display: inline;
+    }   
+    #search1 {
+        display: none;
+    }     
+    #search2 {
+        display: block;
+        margin-top: 10px;
+    }
+    #search2 {
+        width: 95%;
+        padding-left: 25px;
+    }
+    #search2 input{
+        width: 90%;
+    }
+    #search2 i {
+        position: relative;
+        top: 3px;
+        right: 10px;
+    }
+    #headleft {
+        display: flex;
+    }
+    header ul {
+        padding-top: 30px;
+        padding-left: 15px;  
+    }
+}
+@media screen and (max-width: 425px){
+    .menu {
+		display: none;   
+	}
+    #headright label {
+		display: block;
+		position:absolute;
+		right:0;
+	}
+	.menu li {
+		display: block;
+		margin: 0;
+        float: left;
+	}
+	#toggle:checked + .menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        float: left;
+        padding: 10px 0 0;
+		animation: slide-left 1s ease-out;
+	}
+    #headleft li{
+        display: none;
+    }
+}
+/* fin de header */
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding-bottom: 50px;
+}
+#liens {
+    display: flex;
+    justify-content: space-around;
+}
+footer ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+footer h1 {
+    text-align: center;
+    padding: 30px;
+    font-family: 'IM Fell DW Pica', serif;
+    margin: 0;
+}
+footer a{
+    color: #fff;
+    line-height: 2em;
+}
+footer a:hover{
+    color: #fff;
+}
+hr {
+    color: #fff;
+    width:85%;
+    margin:0 auto;
+}
+#reseax{
+    align-self: center;
+    margin: 8px 0 0;
+}
+#reseax li {
+    display: inline;
+    padding: 0 15px;
+}
+#pied {
+    display: flex;
+    justify-content: space-around;
+}
+#newsletter{
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+footer img {
+    width: 250px;
+}
+@media screen and (max-width: 768px){
+    #liens, #pied {
+        display: block;
+    }
+    #reseax{
+        padding: 0;
+        text-align: center;
+    }  
+}  
+/* fin de footer */
+
+/* Fiche de produit */
+#fiche_produit {
+    display: flex;
+    background-color: #f4f4f6;
+}
+.right{
+    flex-grow: 6;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+.right img {
+    width: 100%;
+}
+.left {
+    flex-grow: 5;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+#fiche_produit p {
+    font-weight: 300;
+    padding: 30px 20px 0;
+    margin: 0;
+}
+#boutons {
+    text-align: center;
+}
+.rouge{
+    color: #ff3233;
+}
+.bleu{
+    color: #9ce7fc;
+}
+.peche{
+    color: #ffce7c;
+}
+.fucsia{
+    color: #ff3fc9;
+}
+.bleu2{
+    color: #25a2e7;
+}
+.jaunefluo{
+    color: #FFFA3C
+}
+.verte{
+    color: #147935;
+}
+.violet{
+    color: #8D3CF3;
+}
+.gris{
+    color: #777777;
+}
+#centrercontenu {
+    position: relative;
+    top: 10%;
+}
+#recommandons{
+    display: flex;
+    justify-content: space-around;
+}
+#recommandons img{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+#recommandons h2{
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* Menu select taille */
+#taille-button {
+    border: 2px solid #000;
+    width: 77%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    border-radius: 0;
+}
+#taille-menu li {
+    border-bottom: 1px solid grey;
+}
+#taille-menu:last-child{
+    border-bottom: none;
+}
+#ui-id-1 {
+    display: none;
+}
+#taille-menu li:first-child{
+    border-bottom: none;
+}
+#taille-menu div {
+    line-height: 2em;
+}
+/* Fin de Menu select taille */
+
+/* Boutons de la fiche de produit */
+#ajouterpanier {
+    background-color: #000;
+    color: #fff;
+    width: 70%;
+    border: none;
+    height: 44px;
+    margin-top: 20px;
+    margin-right: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+#ajouterpreferes {
+    background-color: #fff;
+    width: 10%;
+    height: 44px;
+    border: 2px solid #000;
+    border-radius: none;
+    position: relative;
+    top: 5px;
+    font-size: 25px;
+    padding-top: 5px;
+}
+/* Fin de Boutons de la fiche de produit */
+
+@media screen and (max-width: 1100px){
+    #fiche_produit {
+        display: block;
+    }
+    .right img {
+        width: 80%;
+    }
+    div.right {
+        text-align: center;
+    }
+    #centrercontenu {
+        width: 80%;
+        margin: auto;
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .right img {
+        width: 100%;
+    }
+    #ajouterpreferes {
+        top: 3px;
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 425px){
+    #fiche_produit h1, h2, h3, p {
+        font-size: small;
+    }
+    #ajouterpanier {
+        width: 87%;
+        margin-top: 12px;
+        margin-right: 0;
+    }
+    #ajouterpreferes {
+        width: 87%;
+        margin-top: 10px;
+    }
+    #recommandons{
+        display: block;
+    }
+}
+/* Fin de la fiche de produit */
+
+/* Accueil */
+#accueil{
+    display: flex;
+}
+#femmes{
+    position: relative;
+}
+#hommes{
+    position: relative;
+}
+.imgcatalogue{
+    width: 100%;
+}
+#accueil h1{
+    margin: 0;
+    color: #fff;
+    font-size: 100px;
+    position: absolute;
+    z-index: 2;
+    top: -28px;
+    left: -11px;
+    text-transform: uppercase;
+    padding: 0;
+}
+#index #langue{
+    position: relative;
+    top: -5px;
+}
+#accueil ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    bottom: 50px;
+}
+#accueil li{
+    background-color: #fff;
+    height: 50px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+#essentiel{
+    font-size: 30px;
+    padding-top: 20px;
+}
+#conteneur{
+    position: absolute;
+    top: 65%;
+}
+#texte{
+    background-color: #f4f4f6;
+    opacity: 0.4;
+    margin: auto;
+    width: 50%;
+    padding: 16px 0;
+}
+#texte h2{
+    margin: auto;
+}
+#texte p{
+    margin-bottom: 0;
+}
+.avis {
+    background-color: #bbe514;
+    padding-top: 30px;
+}
+.avis h2{
+    font-size: 16px;
+    padding-top: 20px;
+}
+.carousel-item{
+    padding: 20px;
+}
+.avis p{
+    height: 130px;
+}
+.info_assurante{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    padding: 20px;
+}
+.info_assurante img{
+    width: 50px;
+    height: 50px;
+}
+.info_div{
+    display: flex;
+    justify-content: center;
+}
+.info_div p{
+    margin: 0;
+    padding: 15px;
+}
+#sur_nous {
+    padding-top: 60px;
+    background-color: #F988AF;
+    background-image: url("/images/concept.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#sur_nous div{
+    color: #fff;
+    width: 100%;
+}
+#sur_nous div a{
+    color: #fff;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+}
+@media screen and (max-width: 1300px){
+    #conteneur{
+        position: absolute;
+        top: 55%;
+    }
+    #texte{
+        background-color: #f4f4f6;
+        opacity: 0.5;
+        margin: auto;
+        width: 50%;
+        padding: 16px 0;
+    }
+}
+@media screen and (max-width: 1140px) {
+    #texte{
+        width: 100%;
+    }
+    #conteneur{
+        top:45%
+    }
+}
+@media screen and (max-width: 1024px){
+    #accueil h1{
+        font-size: 70px;
+        top: -17px;
+        left: -7px;
+    }  
+    #conteneur{
+        font-size: small;
+        top: 35%;
+    }
+}
+@media screen and (max-width: 768px){
+    #accueil h1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        top: 20%;
+    }     
+    #accueil{
+        display: block;
+    }
+    #accueil ul{
+        display: block;
+    }
+    #accueil li{
+        background-color: #fff;
+        height: 40px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        margin: 5px auto;
+    }
+    #femmes ul{
+        bottom: 30px;
+    }
+    #hommes ul{
+        bottom: 30px;
+    }
+    #conteneur{
+        position: static;
+    }
+    #texte{
+        opacity: 1;
+    }
+    .info_assurante{
+        display: block;
+        height: 100%;
+        padding: 0 100px;
+    }
+    .info_div{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 425px){
+    .info_assurante{
+        padding: 0 40px;
+    }
+}
+/* Fin de l'accueil */
+
+/* Catalogue */
+#catalogue img{
+    width: 100%;
+}
+#catalogue{
+    display: flex;
+}
+.categorie{
+    position: relative;
+}
+.categorie h1{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+#imgtoutproduits img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+#maincatalogue{
+    background-color: #f4f4f6;
+}
+@media screen and (max-width: 1024px) {
+    .categorie h1{
+        font-size: 35px;
+    }   
+}
+@media screen and (max-width: 768px){
+    #catalogue{
+        display: block;
+    }
+    .categorie h1{
+        font-size: 55px;
+        top: 30%;
+    }  
+    #catalogue img{
+        margin-bottom: -5px;
+    }
+}
+/* Fin du catalogue */
+
+/* Page des produits */
+#page_produits{
+    display: flex;
+}
+.produits_line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.produits_line div{
+    width: 405px;
+}
+#page_produits_right img{
+    flex: 1;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+#page_produits aside{
+    padding: 20px 50px 0;
+}
+#page_produits aside ul{
+    list-style-type: none;
+    padding-left: 0;
+    font-size: small;
+}
+#page_produits aside ul li{
+    padding-bottom: 15px;
+}
+#page_produits_right h1, p{
+    text-align: center;
+    padding: 0 50px;
+}
+@media screen and (max-width: 425px) {
+    #page_produits, .produits_line{
+        display: block;
+    }
+    #page_produits_right p{
+        padding: 0 30px;
+    }
+    #page_produits_right h1{
+        margin: 0;
+    }
+    #page_produits_right img{
+
+    }
+    .produits_line div{
+        width: 100%;
+    }
+    #page_produits aside{
+        padding: 0 50px 0;
+    }
+    #page_produits aside ul li{
+        text-align: center;
+    }
+}
+/* Fin de la page du produit */
+
+/* Page des avis */
+#page_avis{
+    background-color: #F988AF;
+    background-image: url("/images/concept.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+#page_avis .carousel-item{
+    padding: 50px;
+}
+#page_avis h2{
+    margin: 0;
+    padding: 50px 0 15px;
+    font-size: 30px;
+}
+#page_avis .font_white{
+    color: #fff;
+}
+.votre_avis{
+    background-color: #fff;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 25px;
+}
+.votre_avis form{
+    width: 90%;
+    margin: auto;
+}
+.votre_avis label{
+    display: block;
+    color: #000;
+    font-size: 20px;
+}
+.votre_avis input, .votre_avis textarea{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.votre_avis input{
+    border-bottom: 1px solid #000;
+}
+.votre_avis textarea{
+    border: 1px solid #000;
+    border-radius: 0;
+    margin: 15px 0;
+}
+.votre_avis button{
+    display: block;
+    width: 50%;
+    margin: auto;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0;
+    height: 40px;
+}
+@media screen and (max-width: 768px) {
+    .votre_avis label{
+        font-size: smaller;
+    }
+    #page_avis h2{
+        font-size: 25px;
+    }
+    #page_avis h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .votre_avis{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 425px){
+    .votre_avis{
+        width: 100%;
+    }
+    #page_avis{
+        padding-bottom: 0;
+    }
+}
+/* Fin de la page d'avis */
+
+/* Points de vente */
+#photo_boutique{
+    width: 100%;
+}
+#main_points{
+    background-color: #fff;
+}
+#points_de_vente{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-content: center;
+}
+#points_de_vente p{
+    padding: 0 20px;
+}
+#carre{
+    width: 50%;
+    margin: 0;
+    color: #000;
+}
+#adress-map iframe{
+    width: 50%;
+}
+#adress-map{
+    display: flex;
+}
+@media screen and (max-width: 425px) {
+    #adress-map{
+        display: block;
+    }
+    #carre, #adress-map iframe{
+        width: 100%;
+    }
+}
+/* Fine de la page Points de vente */
+
+/* Contacts */
+#contacts{
+    background-color: #F988AF;
+    background-image: url("/images/concept.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+.carre, #contactez_nous{
+    width: 40%;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.carre, .item_points, .item_points a{
+    color: #fff;
+}
+.item_points{
+    padding: 15px;
+} 
+#contacts h2{
+    margin: 0;
+    padding: 0 15px 15px;
+}
+#champs_contacts input{
+    padding: 5px;
+}
+@media screen and (max-width: 1024px) {
+    #contacts{
+        display: block;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
+    .carre, #contactez_nous{
+        width: 80%;
+        padding: 30px 0;
+        margin: auto;
+    }
+    .carre{
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #contacts h2{
+        font-size: 25px;
+    }
+    #contacts h3{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .carre, #contactez_nous{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .carre, #contactez_nous{
+        width: 100%;
+    }
+    #contacts{
+        padding: 0;
+    }
+}
+/* fin de la page des contacts */
+
+
+/* Qui sommes nous */
+.imgrelative{
+    width: 100%;
+}
+#qui_nous h1{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 60px;
+    color: #fff;
+}
+.qui_para{
+    display: flex;
+    padding: 0 20px;
+}
+.qui_para p{
+    text-align: justify;
+    padding: 0 20px;
+    font-weight: 300;
+}
+@media screen and (max-width: 1024px) {
+    #qui_nous h1{
+        top: 30%;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 768px){
+    .qui_para{
+        display: block;
+    }
+    #qui_nous h1{
+        top: 30%;
+        font-size: 30px;
+    }
+    #qui_nous p{
+        padding: 0 10px;
+    }
+}
+/* Fin de la page Qui sommes nous */
+
+/* Reservation */
+
+#time {
+    display: flex;
+    justify-content: space-around;
+}
+#time input{
+     width: 20%;
+     text-align: center;
+     border: 1px solid #000;
+}
+#rdv_shopper{
+    font-size: 20px;
+}
+.input_reservation{
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.rdv_buttons{
+    background-color: #fff;
+    color: #000;
+}
+/* Fin de la page Reservation */
+
+/* Mon compte  */
+#moncompte{
+    display: flex;
+    padding: 0 40px 40px;
+    align-items: center;
+}
+#moncompte input, #moncompte button{
+    display: block;
+    margin: 15px auto;
+    width: 50%;
+    padding: 15px;
+    border: none;
+}
+#moncompte div{
+    width: 50%;
+}
+#moncompte input{
+    border-bottom: 1px solid #000;
+}
+#moncompte button{
+    background-color: #000;
+    color: #fff;
+    width: 55%;
+    margin-top: 30px;
+}
+@media screen and (max-width: 1024px) {
+    #moncompte input{
+        width: 70%;
+    }
+    #moncompte button{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #moncompte{
+        display: block;
+    }
+    #moncompte div{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px){
+    #moncompte{
+        padding: 20px 0;
+    }
+    #moncompte div:first-child{
+        margin-bottom: 40px;
+    }
+}
+/* Fin de pade Mon compte */
+
+/* Mon panier */
+
+#panier{
+    background-color: #f4f4f6;
+    display: flex;
+    padding: 30px 120px;
+}
+#panier img{
+    width: 100%;
+}
+#articles a{
+    width: 15%;
+}
+#articles div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#panier section{
+    background-color: #fff;
+}
+#panier section:nth-child(2){
+    flex: 4;
+    padding: 20px;
+}
+#panier section:first-child{
+    flex: 7;
+    margin-right: 40px;
+    padding: 20px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+#panier section:nth-child(2) button{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+@media screen and (max-width: 1300px) {
+    #panier{
+        padding: 30px 60px;
+    }
+    #panier h3{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1024px){
+    #panier{
+        display: block;
+    }
+    #panier section:first-child{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    #panier{
+        padding: 20px 100px;
+    }
+}
+@media screen and (max-width: 768px){
+    #panier{
+        padding: 20px 50px;
+    }
+}
+@media screen and (max-width: 600px){
+    #panier{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 425px){
+    #articles div{
+        display: block;
+    }
+    #panier img{
+        width: 100%;
+    }
+}
+/* Fin de Mon panier */
+
+/* Carriere */
+#carriere label, #carriere input, #carriere textarea, #carriere button{
+    display: block;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+}
+.underline{
+    border: none;
+    border-bottom: 1px solid #000;
+}
+#carriere button{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    margin: 20px auto;
+    width: 50%;
+}
+#carriere {
+    padding: 30px 0;
+    background-color: #F988AF;
+    background-image: url("/images/concept.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#carriere div{
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+@media screen and (max-width: 1024px) {
+    #carriere div{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 768px) {
+    #carriere div{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 425px) {
+    #carriere div{
+        width: 90%;
+    }
+    #carriere h2{
+        font-size: 20px;
+    }
+    #carriere label, #carriere input, #carriere textarea, #carriere button{
+        font-size: 12px;
+    }
+}
+/* Fin de Carriere */
+
+/* Evenements */
+#video{
+    width: 80%;
+    height: 500px;
+    border: none;
+}
+@media screen and (max-width: 768px){
+    #video{
+        width: 100%;
+        height: 400px;
+    }
+    #evenements p{
+       padding: 0 ;
+       margin-bottom: 0;
+     } 
+}
+@media screen and (max-width: 425px){
+    #video{
+        height: 300px;
+    }
+    #evenements h1{
+        font-size: 20px;
+    }
+}
+/* Fin de la page Evenements */
+
+/* Mentions legales */
+#mentions_legales{
+    padding: 30px;
+}
+#mentions_legales p, #mentions_legales h1, #mentions_legales h2,#mentions_legales h3, #mentions_legales h4{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.letters{
+    list-style-type: lower-latin;
+}
+button.print{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    margin: 20px auto;
+    display: block;
+}
+/* Fin de la page Mentions legales */
+
+/* Presse */
+#presse{
+    padding: 30px 40px;
+}
+#presse img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.textleft h1, .textleft p{
+    text-align: left;
+    padding: 0;
+    color: #ff3fc9;
+}
+.textleft{
+    width: 40%;
+    padding: 0 40px 40px;
+}
+.flex_img_para{
+    display: flex;
+    padding: 40px;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.flex_img_para p{
+    width: 50%;
+}
+.stories{
+    padding: 40px 0;
+    background-color: #f4f4f6;
+}
+.stories h3, .stories h5, .stories p{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 65%;
+}
+.stories h5{
+    color: #ff3fc9;
+}
+@media screen and (max-width: 768px) {
+    .flex_img_para{
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+    .textleft{
+        width: 100%;
+        padding: 0 20px 40px;
+        box-sizing: border-box;
+    }
+    .flex_img_para p{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #presse{
+        padding: 0 30px;
+    }
+}
+/* Fin de la page Presse */
+
+/* Plan du site */
+#plan_site{
+    padding: 40px 50px;
+}
+#plan_site h1, #plan_site h2, #plan_site h3, #plan_site h4 {
+    text-align: left;
+    width: 300px;
+} 
+#plan_site h1{
+    margin: auto;
+}
+.flex_lines{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grey_background{
+    background-color: #f4f4f6;
+    padding: 30px;
+}
+/* Fin de la page Plan du site */
