@@ -977,6 +977,12 @@ footer img {
         padding: 0 10px;
     }
 }
+@media screen and (max-width: 425px){
+    #qui_nous h1{
+        top: 30%;
+        font-size: 20px;
+    }
+}
 /* Fin de la page Qui sommes nous */
 
 /* Reservation */
@@ -1242,6 +1248,11 @@ button.print{
     margin: 20px auto;
     display: block;
 }
+@media screen and (max-width: 425px) {
+    #mentions_legales ol, #mentions_legales ul{
+        font-size: 13px;
+    }
+}
 /* Fin de la page Mentions legales */
 
 /* Presse */
@@ -1274,7 +1285,7 @@ button.print{
     width: 50%;
 }
 .stories{
-    padding: 40px 0;
+    padding: 40px 0 0;
     background-color: #f4f4f6;
 }
 .stories h3, .stories h5, .stories p{
@@ -1285,6 +1296,15 @@ button.print{
 }
 .stories h5{
     color: #ff3fc9;
+}
+#presse .owl-dots{
+    display: none;
+}
+#presse .owl-nav{
+    position: absolute;
+    margin-top: 0;
+    bottom: 2%;
+    left: 50%; 
 }
 @media screen and (max-width: 768px) {
     .flex_img_para{
@@ -1303,6 +1323,21 @@ button.print{
     }
     #presse{
         padding: 0 30px;
+    }
+    .stories{
+    background-color: #fff;
+}
+}
+@media screen and (max-width: 425px){
+    #presse img{
+        width: 100%;
+        height: 100%;
+    }
+    #presse .owl-nav{
+        position: static;
+    }
+    .stories p{
+        padding-bottom: 0;
     }
 }
 /* Fin de la page Presse */
@@ -1325,5 +1360,10 @@ button.print{
 .grey_background{
     background-color: #f4f4f6;
     padding: 30px;
+}
+@media screen and (max-width: 425px) {
+    #plan_site h4 {
+        font-size: 10px;
+    }
 }
 /* Fin de la page Plan du site */
