@@ -63,15 +63,14 @@ h1, h2, h3, p{
 .search input:focus{
     outline: none;
 }
-.search input:-webkit-autofill,
+/* .search input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active,
 input:-webkit-autofill:focus{
     background-color: #f4f4f6 !important;
     color: #555 !important;
-    -webkit-box-shadow: 0 0 0 1000px #f4f4f4f6 inset !important;
-    -webkit-text-fill-color: #555555 !important;
-    }
+    box-shadow: 0 0 0 1000px #f4f4f4f6 inset !important;
+    } */
 #search2{
     display: none;
 }       
@@ -736,9 +735,6 @@ footer img {
     }
     #page_produits_right h1{
         margin: 0;
-    }
-    #page_produits_right img{
-
     }
     .produits_line div{
         width: 100%;
