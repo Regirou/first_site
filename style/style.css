@@ -3,7 +3,9 @@ html{
     font-size: 16px;
     margin: 0;
 }
-
+h2, p{
+    text-align: center;
+}
 /* Header */
 header{
     display: flex;
@@ -29,7 +31,7 @@ header li{
     display: inline;
     padding-right: 20px;
 }
-#langue{
+.langue{
     width: 30px;
     height: 20px;
 }
@@ -40,9 +42,6 @@ a{
 a:hover{
     text-decoration: none;
     color: black;
-}
-h1, h2, h3, p{
-    text-align: center;
 }
 #headright ul{
     padding-top: 25px;
@@ -63,14 +62,6 @@ h1, h2, h3, p{
 .search input:focus{
     outline: none;
 }
-/* .search input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:active,
-input:-webkit-autofill:focus{
-    background-color: #f4f4f6 !important;
-    color: #555 !important;
-    box-shadow: 0 0 0 1000px #f4f4f4f6 inset !important;
-    } */
 #search2{
     display: none;
 }       
@@ -90,7 +81,7 @@ input:-webkit-autofill:focus{
 #toggle{
 	display: none;
 }
-label{
+header label{
 	display: none;
 	margin: 18px 40px 0 0;
 	font-size: 26px;
@@ -218,8 +209,7 @@ footer {
     color: #fff;
     padding-bottom: 50px;
 }
-#liens {
-    display: flex;
+footer .space_around{
     justify-content: space-around;
 }
 footer ul {
@@ -240,22 +230,17 @@ footer a{
 footer a:hover{
     color: #fff;
 }
-hr {
+footer hr{
     color: #fff;
     width:85%;
     margin:0 auto;
 }
-#reseax{
-    align-self: center;
-    margin: 8px 0 0;
+footer .align_end{
+    align-self: flex-end;
 }
-#reseax li {
+footer .display_inline li {
     display: inline;
     padding: 0 15px;
-}
-#pied {
-    display: flex;
-    justify-content: space-around;
 }
 #newsletter{
     font-style: italic;
@@ -266,15 +251,6 @@ hr {
 footer img {
     width: 250px;
 }
-@media screen and (max-width: 768px){
-    #liens, #pied {
-        display: block;
-    }
-    #reseax{
-        padding: 0;
-        text-align: center;
-    }  
-}  
 /* fin de footer */
 
 /* Fiche de produit */
@@ -282,23 +258,26 @@ footer img {
     display: flex;
     background-color: #f4f4f6;
 }
-.right{
+#fiche_produit .right{
     flex-grow: 6;
     flex-shrink: 1;
     flex-basis: 0;
 }
-.right img {
+#fiche_produit .right img {
     width: 100%;
 }
-.left {
+#fiche_produit .left {
     flex-grow: 5;
     flex-shrink: 1;
     flex-basis: 0;
 }
+#fiche_produit h1, #fiche_produit h3{
+    text-align: center;
+}
 #fiche_produit p {
     font-weight: 300;
-    padding: 30px 20px 0;
-    margin: 0;
+    padding: 0 50px;
+    text-align: justify;
 }
 #boutons {
     text-align: center;
@@ -402,20 +381,19 @@ footer img {
     #fiche_produit {
         display: block;
     }
-    .right img {
-        width: 80%;
+    #fiche_produit .right img {
+        width: 50%;
     }
-    div.right {
+    #fiche_produit .right {
         text-align: center;
     }
-    #centrercontenu {
-        width: 80%;
-        margin: auto;
-        padding: 30px 0;
+    #fiche_produit p {
+        padding: 20px 70px;
+        margin: 0;
     }
 }
 @media screen and (max-width: 768px){
-    .right img {
+    #fiche_produit .right img {
         width: 100%;
     }
     #ajouterpreferes {
@@ -424,8 +402,11 @@ footer img {
     }
 }
 @media screen and (max-width: 425px){
-    #fiche_produit h1, h2, h3, p {
+    #fiche_produit h1, #fiche_produit h2, #fiche_produit h3, #fiche_produit p{
         font-size: small;
+    }
+    #fiche_produit p {
+        padding: 20px 30px;
     }
     #ajouterpanier {
         width: 87%;
@@ -443,34 +424,31 @@ footer img {
 /* Fin de la fiche de produit */
 
 /* Accueil */
-#accueil{
+.display_flex{
     display: flex;
 }
-#femmes{
+#accueil .div_inflex{
     position: relative;
 }
-#hommes{
-    position: relative;
-}
-.imgcatalogue{
-    width: 100%;
-}
-#accueil h1{
+#accueil .div_inflex h2{
     margin: 0;
     color: #fff;
     font-size: 100px;
     position: absolute;
     z-index: 2;
     top: -28px;
-    left: -11px;
+    left: -7px;
     text-transform: uppercase;
     padding: 0;
 }
-#index #langue{
+#accueil .div_inflex img{
+    width: 100%;
+}
+#langue{
     position: relative;
     top: -5px;
 }
-#accueil ul{
+#accueil .div_inflex ul{
     display: flex;
     list-style-type: none;
     justify-content: space-around;
@@ -481,7 +459,7 @@ footer img {
     width: 100%;
     bottom: 50px;
 }
-#accueil li{
+#accueil .div_inflex li{
     background-color: #fff;
     height: 50px;
     width: 20%;
@@ -490,40 +468,43 @@ footer img {
     justify-content: center;
     text-transform: uppercase;
 }
-#essentiel{
-    font-size: 30px;
-    padding-top: 20px;
-}
-#conteneur{
+#accueil .text_onimage{
     position: absolute;
     top: 65%;
-}
-#texte{
     background-color: #f4f4f6;
     opacity: 0.4;
-    margin: auto;
-    width: 50%;
     padding: 16px 0;
+    left: 20%;
+    width: 60%;
 }
-#texte h2{
-    margin: auto;
+#accueil h2, #accueil p{
+    text-align: center;
 }
-#texte p{
+#accueil h2{
+    padding-bottom: 20px;
     margin-bottom: 0;
 }
-.avis {
+#accueil .div_text, #accueil .text_onimage{
+    padding: 20px;
+}
+#accueil .avis {
     background-color: #bbe514;
     padding-top: 30px;
 }
-.avis h2{
+#accueil .avis h2{
     font-size: 16px;
     padding-top: 20px;
 }
 .carousel-item{
     padding: 20px;
 }
+.carousel-control-prev, .carousel-control-next  {
+    bottom: 40%;
+}
 .avis p{
-    height: 130px;
+    height: 140px;
+    padding: 0 70px;
+    margin: 0;
 }
 .info_assurante{
     display: flex;
@@ -532,20 +513,20 @@ footer img {
     align-items: center;
     padding: 20px;
 }
-.info_assurante img{
+#accueil .info_assurante img{
     width: 50px;
     height: 50px;
 }
-.info_div{
+#accueil .info_div{
     display: flex;
     justify-content: center;
 }
-.info_div p{
+#accueil .info_div p{
     margin: 0;
     padding: 15px;
 }
 #sur_nous {
-    padding-top: 60px;
+    padding: 80px;
     background-color: #F988AF;
     background-image: url("/images/concept.jpeg");
     background-size: 100%;
@@ -564,155 +545,158 @@ footer img {
     display: block;
     text-align: center;
 }
+.img-hover-zoom {
+    overflow: hidden;
+  }
+  
+.img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+.img-hover-zoom:hover img {
+    transform: scale(1.5);
+  }
 @media screen and (max-width: 1300px){
-    #conteneur{
-        position: absolute;
-        top: 55%;
-    }
-    #texte{
-        background-color: #f4f4f6;
-        opacity: 0.5;
-        margin: auto;
-        width: 50%;
-        padding: 16px 0;
+    #accueil .text_onimage{
+        top: 50%;
     }
 }
 @media screen and (max-width: 1140px) {
-    #texte{
-        width: 100%;
-    }
-    #conteneur{
-        top:45%
+    #accueil .text_onimage{
+        top:45%;
+        width: 80%;
+        left: 10%;
     }
 }
 @media screen and (max-width: 1024px){
-    #accueil h1{
+    #accueil .div_inflex h2{
         font-size: 70px;
-        top: -17px;
-        left: -7px;
+        top: -19px;
+        left: -5px;
     }  
-    #conteneur{
+    #accueil .text_onimage{
         font-size: small;
-        top: 35%;
+        top: 30%;
+        width: 100%;
+        left: 0;
     }
 }
 @media screen and (max-width: 768px){
-    #accueil h1{
+    #accueil .div_inflex h2{
         display: flex;
         justify-content: center;
         width: 100%;
         top: 20%;
     }     
-    #accueil{
+    .display_flex{
         display: block;
     }
-    #accueil ul{
-        display: block;
-    }
-    #accueil li{
-        background-color: #fff;
-        height: 40px;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        margin: 5px auto;
-    }
-    #femmes ul{
-        bottom: 30px;
-    }
-    #hommes ul{
-        bottom: 30px;
-    }
-    #conteneur{
+    #accueil .text_onimage{
         position: static;
-    }
-    #texte{
         opacity: 1;
+        color: #000;
+        width: 100%;
     }
-    .info_assurante{
+    #accueil .div_inflex ul{
+        display: block;
+    }
+    #accueil .div_inflex li{
+        margin: 20px auto;
+        width: 40%;
+    }
+    #accueil .div_text{
+        font-size: small;
+    }
+    #accueil .info_assurante{
         display: block;
         height: 100%;
-        padding: 0 100px;
     }
     .info_div{
         padding: 20px;
     }
 }
 @media screen and (max-width: 425px){
+    #accueil .div_inflex h2{
+        display: none;
+    }
     .info_assurante{
         padding: 0 40px;
+    }
+    #sur_nous{
+        padding: 40px;
+    }
+    #accueil h2{
+        font-size: 20px;
+    }
+    .avis p{
+        font-size: small;
+    }
+    .info_div{
+        padding: 10px;
     }
 }
 /* Fin de l'accueil */
 
 /* Catalogue */
-#catalogue img{
+#catalogue .div_relative img{
     width: 100%;
 }
-#catalogue{
-    display: flex;
-}
-.categorie{
-    position: relative;
-}
-.categorie h1{
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 50px;
-    color: #fff;
-    top: 30%;
-    width: 100%;
-    text-align: center;
-}
-#imgtoutproduits img{
+#img_half{
     width: 50%;
     display: block;
     margin: 0 auto;
 }
-#maincatalogue{
+.div_relative{
+    position: relative;
+}
+#catalogue .div_relative h2{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+}
+#catalogue{
     background-color: #f4f4f6;
 }
 @media screen and (max-width: 1024px) {
-    .categorie h1{
+    #catalogue .div_relative h2{
         font-size: 35px;
     }   
 }
 @media screen and (max-width: 768px){
-    #catalogue{
-        display: block;
-    }
-    .categorie h1{
+    #catalogue .div_relative h2{
         font-size: 55px;
-        top: 30%;
     }  
     #catalogue img{
         margin-bottom: -5px;
     }
+    #img_half{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px){
+    #catalogue .div_relative h2{
+        font-size: 35px;
+    }  
 }
 /* Fin du catalogue */
 
 /* Page des produits */
-#page_produits{
-    display: flex;
-}
-.produits_line{
-    display: flex;
+.flex_wrap{
     flex-wrap: wrap;
-    justify-content: center;
 }
-.produits_line div{
-    width: 405px;
+.div_img{
+    width: 33%;
 }
-#page_produits_right img{
-    flex: 1;
+#page_produits .display_flex .flex_wrap img{
     width: 90%;
     display: block;
     margin: 0 auto;
 }
 #page_produits aside{
-    padding: 20px 50px 0;
+    padding: 0 50px;
 }
 #page_produits aside ul{
     list-style-type: none;
@@ -722,28 +706,32 @@ footer img {
 #page_produits aside ul li{
     padding-bottom: 15px;
 }
-#page_produits_right h1, p{
+#page_produits h1, #page_produits p{
     text-align: center;
     padding: 0 50px;
 }
-@media screen and (max-width: 425px) {
-    #page_produits, .produits_line{
-        display: block;
+@media screen and (max-width: 768px){
+    #display_flex{
+        display: flex;
     }
-    #page_produits_right p{
-        padding: 0 30px;
-    }
-    #page_produits_right h1{
-        margin: 0;
-    }
-    .produits_line div{
+    .div_img{
         width: 100%;
     }
-    #page_produits aside{
-        padding: 0 50px 0;
+    #page_produits p{
+        font-size: small;
+    }
+}
+@media screen and (max-width: 600px){
+    #display_flex{
+        display: block;
     }
     #page_produits aside ul li{
         text-align: center;
+    }
+}
+@media screen and (max-width: 425px){
+    #page_produits{
+        display: block;
     }
 }
 /* Fin de la page du produit */
@@ -758,114 +746,60 @@ footer img {
     background-size: cover;
     padding-bottom: 50px;
 }
-#page_avis .carousel-item{
-    padding: 50px;
+.div_avis{
+    color: #fff;
 }
 #page_avis h2{
-    margin: 0;
-    padding: 50px 0 15px;
-    font-size: 30px;
+    padding: 30px 20px;
 }
-#page_avis .font_white{
-    color: #fff;
-}
-.votre_avis{
-    background-color: #fff;
-    width: 60%;
-    margin: auto;
-    padding-bottom: 25px;
-}
-.votre_avis form{
-    width: 90%;
-    margin: auto;
-}
-.votre_avis label{
-    display: block;
-    color: #000;
-    font-size: 20px;
-}
-.votre_avis input, .votre_avis textarea{
-    width: 100%;
-    border: none;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-.votre_avis input{
-    border-bottom: 1px solid #000;
-}
-.votre_avis textarea{
-    border: 1px solid #000;
-    border-radius: 0;
-    margin: 15px 0;
-}
-.votre_avis button{
-    display: block;
-    width: 50%;
-    margin: auto;
-    border: none;
-    color: #fff;
-    background-color: #000;
-    border-radius: 0;
-    height: 40px;
-}
+
 @media screen and (max-width: 768px) {
-    .votre_avis label{
-        font-size: smaller;
-    }
     #page_avis h2{
         font-size: 25px;
     }
-    #page_avis h3{
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .votre_avis{
-        width: 90%;
-    }
 }
 @media screen and (max-width: 425px){
-    .votre_avis{
-        width: 100%;
-    }
-    #page_avis{
-        padding-bottom: 0;
+    #page_avis h2{
+        font-size: 20px;
     }
 }
 /* Fin de la page d'avis */
 
 /* Points de vente */
-#photo_boutique{
+#points_de_vente img{
     width: 100%;
 }
-#main_points{
-    background-color: #fff;
-}
-#points_de_vente{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    align-content: center;
-}
-#points_de_vente p{
-    padding: 0 20px;
-}
-#carre{
-    width: 50%;
-    margin: 0;
-    color: #000;
-}
-#adress-map iframe{
+.width_50{
     width: 50%;
 }
-#adress-map{
-    display: flex;
+#points_de_vente .div_inflex{
+    text-align: center;
+    padding: 0 10px;
+}
+#points_de_vente .width_50 .display_flex{
+    justify-content: space-around;
+    padding: 30px 20px;
+}
+@media screen and (max-width: 1100px){
+    #points_de_vente h2{
+        font-size: 20px;
+    } 
+    #points_de_vente h3, #points_de_vente p{
+        font-size: small;
+    }
+}
+@media screen and (max-width: 768px){
+    .width_50{
+        width: 100%;
+    }
+    #points_de_vente .width_50 .display_flex{
+        display: flex;
+    }
 }
 @media screen and (max-width: 425px) {
-    #adress-map{
+    #points_de_vente .width_50 .display_flex{
         display: block;
-    }
-    #carre, #adress-map iframe{
-        width: 100%;
+        padding: 0 20px 20px;
     }
 }
 /* Fine de la page Points de vente */
@@ -878,134 +812,116 @@ footer img {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    display: flex;
-    justify-content: space-around;
     padding: 40px 0;
 }
-.carre, #contactez_nous{
-    width: 40%;
-    padding: 30px 0;
-    margin: 0 auto;
+.background_white{
+    background-color: #fff;
 }
-.carre, .item_points, .item_points a{
+.div_form{
+    display: block;
+    width: 50%;
+    margin: auto;
+    padding: 20px 40px;
+}
+.div_form input, .div_form textarea, .div_form button{
+    display: block;
+}
+.div_form input, .div_form textarea{
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.div_form button{
+    width: 50%;
+    margin: auto;
+    background-color: #000;
     color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
 }
-.item_points{
-    padding: 15px;
-} 
-#contacts h2{
-    margin: 0;
-    padding: 0 15px 15px;
-}
-#champs_contacts input{
-    padding: 5px;
+.div_form input{
+    border: none;
+    border-bottom: 1px solid #000;
 }
 @media screen and (max-width: 1024px) {
-    #contacts{
-        display: block;
-        padding: 40px 0;
-        margin: 0 auto;
-    }
-    .carre, #contactez_nous{
+    .div_form{
         width: 80%;
-        padding: 30px 0;
-        margin: auto;
-    }
-    .carre{
-        margin-bottom: 40px;
-    }
-}
-@media screen and (max-width: 768px) {
-    #contacts h2{
-        font-size: 25px;
-    }
-    #contacts h3{
-        font-size: 16px;
-        font-weight: bold;
-    }
-    .carre, #contactez_nous{
-        width: 90%;
     }
 }
 @media screen and (max-width: 425px) {
-    .carre, #contactez_nous{
-        width: 100%;
+    .div_form{
+        padding: 20px;
     }
-    #contacts{
-        padding: 0;
+    #contacts h2{
+        font-size: 20px;
     }
 }
 /* fin de la page des contacts */
 
 
 /* Qui sommes nous */
-.imgrelative{
+#qui_sommes_nous img{
     width: 100%;
 }
-#qui_nous h1{
+#qui_sommes_nous section{
+    position: relative;
+}
+#qui_sommes_nous h2{
     position: absolute;
-    top: 40%;
+    top: 20%;
     width: 100%;
     margin: 0 auto;
-    font-size: 60px;
+    font-size: 70px;
     color: #fff;
 }
-.qui_para{
-    display: flex;
-    padding: 0 20px;
+#qui_sommes_nous h3{
+    text-align: center;
 }
-.qui_para p{
+#qui_sommes_nous p{
     text-align: justify;
     padding: 0 20px;
     font-weight: 300;
 }
 @media screen and (max-width: 1024px) {
-    #qui_nous h1{
-        top: 30%;
-        font-size: 40px;
+    #qui_sommes_nous h2{
+        top: 12%;
     }
 }
 @media screen and (max-width: 768px){
-    .qui_para{
-        display: block;
+    #qui_sommes_nous h2{
+        top: 9%;
+        font-size: 40px;
     }
-    #qui_nous h1{
-        top: 30%;
-        font-size: 30px;
-    }
-    #qui_nous p{
-        padding: 0 10px;
+    #qui_sommes_nous p{
+        font-size: small;
+        padding: 0 20px;
     }
 }
-@media screen and (max-width: 425px){
-    #qui_nous h1{
-        top: 30%;
-        font-size: 20px;
+@media screen and (max-width: 500px){
+    #qui_sommes_nous h2{
+        top: 4%;
+        font-size: 30px;
     }
 }
 /* Fin de la page Qui sommes nous */
 
 /* Reservation */
-
-#time {
-    display: flex;
+#time{
     justify-content: space-around;
 }
 #time input{
-     width: 20%;
-     text-align: center;
-     border: 1px solid #000;
+    width: 30%;
+    text-align: center;
+    border: 1px solid #000;
 }
-#rdv_shopper{
-    font-size: 20px;
-}
-.input_reservation{
-    margin-right: 20px;
-    box-sizing: border-box;
-}
-.rdv_buttons{
-    background-color: #fff;
-    color: #000;
+@media screen and (max-width: 768px){
+    #time{
+        display: flex;
+    } 
 }
 /* Fin de la page Reservation */
 
@@ -1202,27 +1118,25 @@ footer img {
 /* Fin de Carriere */
 
 /* Evenements */
-#video{
+#evenements iframe{
     width: 80%;
     height: 500px;
     border: none;
 }
+#evenements p{
+    margin-bottom: 0;
+}
 @media screen and (max-width: 768px){
-    #video{
+    #evenements iframe{
         width: 100%;
         height: 400px;
     }
-    #evenements p{
-       padding: 0 ;
-       margin-bottom: 0;
-     } 
 }
 @media screen and (max-width: 425px){
-    #video{
+    #evenements iframe{
         height: 300px;
-    }
-    #evenements h1{
-        font-size: 20px;
+        display: block;
+        margin: auto;
     }
 }
 /* Fin de la page Evenements */
@@ -1363,7 +1277,7 @@ button.print{
 }
 @media screen and (max-width: 425px) {
     #plan_site h4 {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 /* Fin de la page Plan du site */

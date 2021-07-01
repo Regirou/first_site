@@ -22,39 +22,18 @@
 <div id="header"></div>
 
 <main id="contacts">
-    <div class="carre">
-        <h2>Boutique - Rue des Rosiers</h2>
-        <div id="points_de_vente">
-            <div class="item_points">
-                <h3>Adresse</h3>
-                <p>7 Rue des Rosiers
-                    <br>
-                    75004 Paris
-                </p>
-            </div>
-            <div class="item_points">
-                <h3>Horaires</h3>
-                <p>Lundi à Samedi : 10h30 à 20h
-                    <br>
-                    Dimanche : 11h à 20h
-                </p>
-            </div>
-            <div class="item_points">
-                <a href="tel:+33147075065"><h3>Téléphone</h3>
-                <p>01 47 07 50 65</p></a>
-            </div>
-        </div>
-    </div>
-    <div class="votre_avis" id="contactez_nous">
-        <h2 id="rdv_shopper">Prenez un RDV privé en boutique avec un coach personal shopper</h2>
+    <div class="background_white div_form">
+        <h2>Réservez le rendezvous avec un shopper personel</h2>
         <form>
-            <label>Votre prénom:</label><input type="text" class="input_reservation">
-            <label>Votre e-mail:</label><input class="input_reservation" type="email">
-            <label>Selectionnez la date:</label><input id="datepicker" class="input_reservation">
-            <div id="time">
-            <input class="rdv_buttons" type="button" value="17:00"><input class="rdv_buttons" type="button" value="18:00">
+            <input type="text" placeholder="Nom:">
+            <input type="text" placeholder="Prénom:">
+            <input type="email" placeholder="E-mail:">
+            <input type="tel" placeholder="Téléphone:">
+            <textarea name="avis" rows="5" placeholder="Message:"></textarea>
+            <div id="time" class="display_flex">
+            <input type="text" value="17:00"><input type="text" value="18:00" >
             </div>
-            <button>Reserver</button>
+            <button>Envoyer</button>
         </form>
     </div>
 </main>

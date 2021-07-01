@@ -17,5 +17,4 @@ imgElement.addEventListener ('click', changerImage)
 $(function() {
     console.log('page html chargé !');
     $("#taille").selectmenu();
-
 })

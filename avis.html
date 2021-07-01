@@ -22,8 +22,8 @@
 </head>
 <body>
     <div id="header"></div>
-    <main class="avis" id="page_avis">
-        <div class="font_white">
+    <main id="page_avis">
+        <div class="div_avis avis">
             <h2>VOUS LE DITES MIEUX QUE NOUS</h2>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -68,12 +68,13 @@
                 </a>
             </div>
         </div>  
-        <div class="votre_avis">
+        <div class="background_white div_form">
             <h2>Laissez votre avis</h2>
             <form>
-                <label>Votre prénom:</label><input type="text">
-                <label>Votre e-mail:</label><input type="email">
-                <textarea name="avis" rows="5" cols="50"></textarea>
+                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Prénom">
+                <input type="email" placeholder="E-mail">
+                <textarea name="avis" rows="5" cols="50" placeholder="Avis"></textarea>
                 <button>Envoyer</button>
             </form>
         </div>

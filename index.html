@@ -17,48 +17,80 @@
     <script src="scripts/jquery-3.6.0.js"></script>
     <script> 
         $(function(){
-            $("#header").load("header.html"); 
             $("#footer").load("footer.html"); 
         });
     </script>
 </head>
 <body>
-    <div id="header"></div>
-   
-    <main id="maincatalogue">
-        <div id="accueil">
-            <section id="femmes">
-                <a href="cataloguefemmes.html"><img class="imgcatalogue imgfemme" src="images/femmes.png" alt="femmes vetement robe pull t-shirt" title="femmes vetement robe pull t-shirt"></a>
-                <h1>FEMMES</h1>
+    <header>
+        <div id="headleft">
+            <a href="index.html"><img src="images/erener.png" alt="logo eReneR boutique" title="logo eReneR boutique vetement"></a>
+            <ul>
+                <li> <a href="cataloguefemmes.html"> Femmes </a></li>
+                <li> <a href="cataloguehommes.html"> Hommes </a></li>
+            </ul>
+        </div>
+        <form id="search1" class="search" role="search">
+            <i class="flaticon-loupe"></i>
+            <input type="search" placeholder="Rechercher" name="search">
+        </form>
+        <div id="headright">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <ul class="menu">
+                <li> <a href="#"> <img id="langue" class="langue" src="images/drapeau-anglais.png" alt="petit drapeau anglais"> </a> </li>
+                <li> <a href="moncompte.html"> <i class="flaticon-user"></i> </a></li>
+                <li> <a href="#"> <i class="flaticon-heart"></i> </a> </li>
+                <li> <a href="monpanier.html"> <i class="flaticon-shopping-bag"></i> </a> </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <form id="search2" class="search" role="search">
+            <i class="flaticon-loupe"></i>
+            <input type="search" placeholder="Rechercher" name="search">
+        </form>
+    </header>
+    <main id="accueil">
+        <div class="display_flex">
+            <div class="div_inflex">
+                <a href="cataloguefemmes.html">
+                    <div class="img-hover-zoom">
+                        <img class="" src="images/femmes.png" alt="femmes vetement robe pull t-shirt" title="femmes vetement robe pull t-shirt">
+                    </div>
+                </a>
+                <h2>FEMMES</h2>
                 <ul>
                     <li><a href="page_robes.html"> Robes </a></li>
                     <li><a href="page_pulls_femmes.html">Pulls</a></li>
                     <li><a href="page_tshirts_femmes.html">T-shirts</a></li>
                 </ul>
-            </section>
-            <section id="hommes">
-                <a href="cataloguehommes.html"><img class="imgcatalogue imghomme" src="images/hommes.png" alt="hommes vetement hoodie pull t-shirt" title="hommes vetement hoodie pull t-shirt"></a>
-                <h1>HOMMES</h1>
+            </div>
+            <div class="div_inflex">
+                <a href="cataloguehommes.html">
+                    <div class="img-hover-zoom">
+                        <img class="" src="images/hommes.png" alt="hommes vetement hoodie pull t-shirt" title="hommes vetement hoodie pull t-shirt">
+                    </div>
+                </a>
+                <h2>HOMMES</h2>
                 <ul>
                     <li><a href="page_hoodies.html"> Hoodies </a></li>
                     <li><a href="page_pulls_hommes.html">Pulls</a></li>
                     <li><a href="page_tshirts_hommes.html">T-shirts</a></li>
                 </ul>
-            </section>
-            <div id="conteneur">
-            <div id="texte">
+            </div>
+            <div class="text_onimage">
                 <h2>JOIN THE FUTURE</h2>
                 <p>Des matières nobles, un oasis de couleurs optimistes et des designs uniques conçus pour celles et ceux qui ont conservé leur âme d’enfant. Un vestiaire facile à porter et à associer toute l’année.</p>
             </div>
-            </div>
         </div>
-        <div>
-            <h2 id="essentiel">ESSENTIALS</h2>
+        <div class="div_text">
+            <h2>ESSENTIALS</h2>
             <p>Des créations impertinentes pour un vestiaire coloré. 
                 <br>
                 Notre atelier a élaboré pour vous de nouvelles coupes, couleurs et de nouveaux imprimés dans des matières toujours aussi inégalables.
             </p>
-            <div id="recommandons">
+        </div>
+        <div id="recommandons">
                 <div>
                     <a href="page_hoodies.html">
                         <img src="images/hoodie_bleu_effet_degrade_front.jpeg" alt="hoodie vetement homme erener" title="hoodie vetement hommes erener">
@@ -81,7 +113,7 @@
         </div>
         <div id="sur_nous">
             <div>
-                <h2>Notre concept</h2>
+                <h2>NOTRE CONCEPT</h2>
                 <p>Découvrez notre secret pour démocratiser les matières nobles, tout en vous proposant la meilleure qualité et des designs uniques.</p>
                 <a href="qui_sommes_nous.html">Savoir plus</a>
             </div>
@@ -149,7 +181,6 @@
     
     <div id="footer"></div>  
     <script src="scripts/jquery-3.6.0.js"></script>
-    <script src="scripts/accueil.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
